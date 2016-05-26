@@ -13,13 +13,14 @@ nav img {
 body {
 	font-family:"Open Sans";
 }
-h2, #hero h3, header a, footer a, #about a  {
+h2, #hero h3, header a, footer nav a, #about a  {
 	font-family:Oswald;
 	text-transform:uppercase;
 }
 #hero {
 	text-align:center;
 	margin:0 auto;
+	color:#FFF;
 }
 
 /*---- h2 ----*/
@@ -33,6 +34,10 @@ h2 {
 
 #hero h3 {
 	font-size:72px;
+	display:inline-block;
+	padding:0 16px;
+	margin:0;
+	border:solid 10px #FFF;
 }
 #newsletter h3, #contact h3 {
 	display:none;
@@ -42,9 +47,16 @@ h2 {
 
 #hero p {
 	font-size:24px;
+	line-height:2.5rem;
 }
 #hero p span {
 	font-weight:700;
+}
+.absl p {
+	font-size:36px;
+	font-weight:700;
+	line-height:48px;
+	color:#FFF;
 }
 
 /*---- nav ----*/
@@ -54,7 +66,24 @@ nav ul {
 }
 nav li {
 	display:inline-block;
-	padding-right:40px;
+	padding-right:46px;
+}
+
+/*---- blockquote ----*/
+
+blockquote {
+	font-size:28px;
+	font-weight:700;
+	line-height:40px;
+	color:#FFF;
+	padding:70px 0;
+}
+blockquote p {
+	margin:0;
+	padding-bottom:10px;
+}
+blockquote footer {
+	font-weight:300;
 }
 
 /*======== SITE STRUCTURE ========*/
@@ -72,6 +101,67 @@ nav li {
 	content: " ";
 	display: table;
 	clear: both;
+}
+[class*="col-"] {
+	float: left;
+	padding: 0 2rem 2rem 0;
+}
+[class*="col-"]:last-of-type {
+	float: left;
+	padding-right: 0;
+}
+.rel {
+	position:relative;
+}
+.absl {
+	position:absolute;
+	z-index:100;
+	width:100%;
+	display:flex;
+	align-items: center;
+    justify-content: center;
+	background-color:rgba(0,0,0,.30);
+	height:100%;
+}
+.block-center {
+	float:none;
+	margin:0 auto;
+	text-align:center;
+}
+.w-2-3 {
+	width:66.66%;
+}
+.w-1-2 {
+	width:50%;
+}
+figure {
+	margin:0;
+	padding-right:2rem;
+}
+#roasts .col-2-3 {
+	padding-left:1rem;
+}
+.p-tb-l {
+	padding:200px 0;
+}
+/*======== MEDIA ========*/
+
+
+/*======== BACKGROUNDS ========*/
+
+#hero {
+	background: url(../img/hero.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+}
+#review {
+	background: url(../img/review-img.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
 }
 
 /*======== SINGLE COLUMNS ========*/

@@ -6,8 +6,22 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(45.523452, -122.676207),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 <title>Twin Finch</title>
 </head>
+
 
 <body>
 <header>
@@ -24,16 +38,16 @@
     </div>
 </header>
 <section>
-    <div id="hero">
+    <div id="hero" class="p-tb-l">
     	<div class="wrapper">
         	<div class="row">
-                <section class="col-2-3">
+                <div class="block-center w-2-3">
                     <header>
                         <h3>Evening Oak</h3>
                     </header>
                     <p><span>$19.95 Medium-Dark</span> — Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
                     <a>Order</a>
-                </section>
+                </div>
             </div>
         </div>
     </div>
@@ -41,7 +55,7 @@
 <div id="review">
 	<div class="wrapper">
     	<div>
-            <blockquote>
+            <blockquote class="block-center w-2-3">
             	<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
             	<footer>
                 	<p>- <a>Coffee Review</a></p>
@@ -53,7 +67,7 @@
 <section id="roasts">
 	<div class="wrapper">
     	<div class="row">
-        	<div class="col-1-2">
+        	<div class="block-center w-1-2">
                 <header>
                     <h2>Roasts</h2>
                 </header>
@@ -159,7 +173,16 @@
         </div>
     </div>
 </section>
-<div>
+<div class="rel">
+	<div class="absl">
+        <div class="wrapper">
+            <div class="block-center w-2-3">
+                <p>You can buy from us directly at our Portland storefront located at 457 NW Market Street.</p>
+            </div>
+        </div>
+    </div>
+	<div id="map" class="p-tb-l">
+    </div>
 </div>
 <div id="contact">
 	<div class="wrapper">
