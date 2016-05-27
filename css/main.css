@@ -1,12 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.col-1-3 img {
-	width:100%;
-}
-nav img {
-	width:100px;
-}
+
+/*=================================
+
+	TABLE OF CONTENTS
+	1. TYPOGRAPHY
+		1.1 h2
+		1.2 h3
+		1.3 p
+		1.4 naav
+		1.5 blockquote
+	2. FORM
+	3. SITE STRUCTURE
+	4. MEDIA
+	5. BACKGROUNDS
+	6. SINGLE COLUMNS
+	7. PARTIAL COLUMNS
+	
+	8. media breakpoint @ 480
+	
+=================================*/
+
 
 /*======== TYPOGRAPHY ========*/
 
@@ -47,10 +62,17 @@ h2 {
 
 #hero p {
 	font-size:24px;
+	font-weight:300;
 	line-height:2.5rem;
 }
 #hero p span {
 	font-weight:700;
+}
+#about-img p {
+	font-size:24px;
+	font-weight:300;
+	line-height:34px;
+	color:#FFF;
 }
 .absl p {
 	font-size:36px;
@@ -76,7 +98,6 @@ blockquote {
 	font-weight:700;
 	line-height:40px;
 	color:#FFF;
-	padding:70px 0;
 }
 blockquote p {
 	margin:0;
@@ -84,6 +105,12 @@ blockquote p {
 }
 blockquote footer {
 	font-weight:300;
+}
+
+/*======== FORM ========*/
+
+label {
+	display:none;
 }
 
 /*======== SITE STRUCTURE ========*/
@@ -117,11 +144,6 @@ blockquote footer {
 	position:absolute;
 	z-index:100;
 	width:100%;
-	display:flex;
-	align-items: center;
-    justify-content: center;
-	background-color:rgba(0,0,0,.30);
-	height:100%;
 }
 .block-center {
 	float:none;
@@ -130,6 +152,9 @@ blockquote footer {
 }
 .w-2-3 {
 	width:66.66%;
+}
+.w-1-3 {
+	width:33.33%;
 }
 .w-1-2 {
 	width:50%;
@@ -144,8 +169,29 @@ figure {
 .p-tb-l {
 	padding:200px 0;
 }
+.p-tb-s {
+	padding:70px 0;
+}
 /*======== MEDIA ========*/
 
+#roasts .absl {
+	width:45%;
+	left:30%;
+	top:-5%;
+}
+#map-container .absl {
+	display:flex;
+	align-items: center;
+    justify-content: center;
+	background-color:rgba(0,0,0,.30);
+	height:100%;
+}
+.col-1-3 img {
+	width:100%;
+}
+nav img {
+	width:100px;
+}
 
 /*======== BACKGROUNDS ========*/
 
@@ -158,6 +204,13 @@ figure {
 }
 #review {
 	background: url(../img/review-img.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+}
+#about-img {
+	background: url(../img/coffee-pots.jpg) no-repeat center center;
 	-webkit-background-size: cover;
  	-moz-background-size: cover;
  	-o-background-size: cover;
@@ -261,4 +314,40 @@ figure {
 }
 .col-9-12 {
 	width: 91.67%;
+}
+
+@media screen and (max-width: 480px) {
+	
+	[class*="col-"] {
+		float: left;
+		padding: 0 0 2rem 0;
+	}
+	.col-1-2 {
+		width:100%;
+	}
+	.col-1-3 {
+		padding:1rem 0;
+	}
+	.w-1-2 {
+		width:100%;
+	}
+	.w-2-3 {
+		width:100%;
+	}
+	nav ul {
+		padding:0;
+	}
+	nav li {
+		padding-right:13px;
+	}
+	nav li:last-of-type {
+		padding-right:0;
+	}
+	#hero h3 {
+		font-size:60px;
+	}
+	blockquote {
+		font-size:1.6rem;
+	}
+	
 }
