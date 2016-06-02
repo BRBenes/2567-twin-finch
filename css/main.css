@@ -40,6 +40,9 @@ h2, #hero h3, header a, footer nav a, #about a  {
 #roasts > .wrapper > div:first-child {
 	margin-bottom:4.125rem;
 }
+#about-img .col-2-3 {
+	padding-bottom:0;
+}
 
 /*---- h2 ----*/
 
@@ -49,6 +52,7 @@ h2 {
 	display:inline-block;
 	padding:0 1rem;
 	border:solid .5rem #000;
+	margin-top:0;
 }
 #roasts h2 {
 	margin-bottom:1.75rem;
@@ -80,6 +84,7 @@ p {
 	font-size:24px;
 	font-weight:300;
 	line-height:2.5rem;
+	margin-bottom:2rem;
 }
 #hero p span {
 	font-weight:700;
@@ -90,8 +95,11 @@ p {
 	line-height:34px;
 	color:#FFF;
 }
-#roasts p {
+#roasts p, #about-img p {
 	margin:0;
+}
+#about > .wrapper p {
+	margin-bottom:4.75rem;
 }
 #roasts div p:nth-child(3) {
 	font-weight:300;
@@ -109,30 +117,70 @@ p {
 a {
 	text-decoration:none;
 }
-#roasts a {
-	font-size:1.25rem;
+#hero a {
+	font-size:1.5rem;
+	color:#FFF;
+}
+#hero a, #roasts a, #about a, #contact a {
 	font-weight:700;
-	color:#000;
 	padding:.35rem 2.75rem;
 	text-transform:uppercase;
+}
+#roasts a, #about a, #contact a {
+	font-size:1.25rem;
+	color:#000;
 	border:solid .2rem #000;
 }
-#roasts a:hover {
+#newsletter a, #hero a {
+	color:#FFF;
+	border:solid .2rem #FFF;
+}
+#roasts a:hover, #about a:hover, #contact a:hover {
 	color:#FFF;
 	background-color:#000;
 }
-
+#newsletter a:hover {
+	color:#535049;
+	background-color:#FFF;
+}
+#hero a:hover {
+	color:#535049;
+	background-color:#FFF;
+}
+#footer a {
+	color:#FFF;
+	text-align:center;
+}
+#footer a:hover {
+	color:#89806F;
+}
 /*---- nav ----*/
 
 nav ul {
 	text-align:center;
 }
-nav li {
+nav li, footer li {
 	display:inline-block;
-	padding-right:46px;
+	padding-right:3rem;
 }
-nav li:nth-child(3) {
+header nav li:nth-child(3) {
 	vertical-align:middle;
+}
+nav a {
+	color:#000;
+}
+nav a:hover {
+	color:#ACACAC;
+}
+footer .col-1-3 {
+	padding:0 !important;
+}
+footer ul {
+	padding:0;
+	margin-top:2.25rem;
+}
+footer li:last-of-type {
+	padding-right:0;
 }
 
 /*---- blockquote ----*/
@@ -154,6 +202,41 @@ blockquote footer p {
 label {
 	display:none;
 }
+input, textarea {
+	outline:none;
+}
+#about input {
+	display:block;
+	margin:0 auto;
+	color:#FFF;
+	text-align:center;
+	padding:0 5.2rem .2rem;
+	margin-bottom:1rem;
+	border-bottom:solid .2rem #FFF;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	background-color:#535049;
+}
+#contact input, #contact textarea {
+	display:block;
+	width:100%;
+	border:solid .2rem #000;
+	text-indent:.25rem;
+}
+#contact input {
+	height:2.15rem;
+	margin-bottom:1.5rem;
+}
+#contact input:last-of-type {
+	margin-bottom:0;
+}
+#contact textarea {
+	height:9.45rem;
+}
+#newsletter ::-webkit-input-placeholder {
+   color:#FFF;
+}
 
 /*======== SITE STRUCTURE ========*/
 
@@ -163,7 +246,7 @@ label {
 	box-sizing: border-box;
 }
 .wrapper {
-	width: 80%; /*original width was 1170px*/
+	width: 80%;
 	margin: 0 auto;
 }
 .row:after {
@@ -202,8 +285,14 @@ figure {
 .p-tb-l {
 	padding:200px 0;
 }
+.p-tb-m {
+	padding:9.375rem 0;
+}
 .p-tb-s {
-	padding:70px 0;
+	padding:5.625rem 0;
+}
+#contact .col-2-3, #contact .col-1-2:last-of-type {
+	padding:0 0 3rem;
 }
 /*======== MEDIA ========*/
 
@@ -223,31 +312,40 @@ figure {
 	width:100%;
 }
 nav img {
-	width:100px;
+	width:6.25rem;
+}
+#footer img {
+	width:8rem;
 }
 
 /*======== BACKGROUNDS ========*/
 
 #hero {
-	background: url(../img/hero.jpg) no-repeat center center;
+	background: url(../img/hero.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
  	-moz-background-size: cover;
  	-o-background-size: cover;
  	background-size: cover;
 }
 #review {
-	background: url(../img/review-img.jpg) no-repeat center center;
+	background: url(../img/review-img.jpg) no-repeat bottom left fixed;
 	-webkit-background-size: cover;
  	-moz-background-size: cover;
  	-o-background-size: cover;
  	background-size: cover;
 }
 #about-img {
-	background: url(../img/coffee-pots.jpg) no-repeat center center;
+	background: url(../img/coffee-pots.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
  	-moz-background-size: cover;
  	-o-background-size: cover;
  	background-size: cover;
+}
+#newsletter {
+	background-color:#535049;
+}
+#footer {
+	background-color:#535049;
 }
 
 /*======== SINGLE COLUMNS ========*/
@@ -353,7 +451,6 @@ nav img {
 	
 	[class*="col-"] {
 		float: left;
-		padding: 0 0 2rem 0;
 	}
 	[class*="col-"]:last-of-type {
 		float:left;
@@ -365,24 +462,42 @@ nav img {
 	.col-1-3 {
 		padding:1rem 0;
 	}
+	#roasts .col-2-3 {
+		width:66.66%;
+	}
 	.col-2-3 {
+		width:100%;
+	}
+	#about .col-1-3 {
 		width:100%;
 	}
 	nav ul {
 		padding:0;
+		margin-top:0;
 	}
-	nav li {
-		padding-right:13px;
+	#footer nav li {
+		display:block;
+		padding:0 0 1rem;
 	}
 	nav li:last-of-type {
 		padding-right:0;
 	}
 	#hero h3 {
-		font-size:3.5rem;
+		font-size:3rem;
 		border:solid .5rem #FFF;
 	}
 	blockquote {
 		font-size:1.6rem;
 	}
-	
+	p {
+		font-size:1rem;
+	}
+	#contact .col-2-3, #contact .col-1-2 {
+		padding:0 0 1.65rem;
+	}
+	#roasts .absl {
+		width:45%;
+		left:22.5%;
+		top:-5%;
+	}
 }
