@@ -9,17 +9,19 @@
 		1.1 h2
 		1.2 h3
 		1.3 p
-		1.4 naav
-		1.5 blockquote
+		1.4 a
+		1.5 nav
+		1.6 blockquote
 	2. FORM
 	3. SITE STRUCTURE
 	4. MEDIA
 	5. BACKGROUNDS
-	6. SINGLE COLUMNS
-	7. PARTIAL COLUMNS
+	6. UTILITY
+	7. SINGLE COLUMNS
+	8. PARTIAL COLUMNS
 	
-	8. media breakpoint @ 480
-	
+	9. media breakpoint @ 480
+
 =================================*/
 
 
@@ -32,10 +34,23 @@ h2, #hero h3, header a, footer nav a, #about a  {
 	font-family:Oswald;
 	text-transform:uppercase;
 }
-#hero {
+#hero, #footer a, ul, #about input{
 	text-align:center;
-	margin:0 auto;
+}
+#roasts a, #about a, #contact a, nav a {
+	color:#000;
+}
+#hero, #about-img p, #about input, .absl p, #hero a, #newsletter a, #footer a, blockquote p {
 	color:#FFF;
+}
+h2, #hero p span, #about-img span, .absl p, #hero a, #roasts a, #about a, #contact a, blockquote p {
+	font-weight:700;
+}
+#hero p, #about-img p, #roasts div p:nth-child(3), blockquote footer p {
+	font-weight:300;
+}
+#hero {
+	margin:0 auto;
 }
 #roasts > .wrapper > div:first-child {
 	margin-bottom:4.125rem;
@@ -47,8 +62,7 @@ h2, #hero h3, header a, footer nav a, #about a  {
 /*---- h2 ----*/
 
 h2 {
-	font-size:56px;
-	font-weight:700;
+	font-size:3.5rem;
 	display:inline-block;
 	padding:0 1rem;
 	border:solid .5rem #000;
@@ -61,11 +75,11 @@ h2 {
 /*---- h3 ----*/
 
 #hero h3 {
-	font-size:72px;
+	font-size:4.5rem;
 	display:inline-block;
 	padding:0 1rem;
 	margin:0;
-	border:solid 10px #FFF;
+	border:solid .625rem #FFF;
 }
 h3 {
 	font-size:1.5rem;
@@ -81,19 +95,13 @@ p {
 	font-size:1.125rem;
 }
 #hero p {
-	font-size:24px;
-	font-weight:300;
+	font-size:1.5rem;
 	line-height:2.5rem;
 	margin-bottom:2rem;
 }
-#hero p span {
-	font-weight:700;
-}
 #about-img p {
-	font-size:24px;
-	font-weight:300;
-	line-height:34px;
-	color:#FFF;
+	font-size:1.5rem;
+	line-height:2.125rem;
 }
 #roasts p, #about-img p {
 	margin:0;
@@ -102,14 +110,11 @@ p {
 	margin-bottom:4.75rem;
 }
 #roasts div p:nth-child(3) {
-	font-weight:300;
 	margin-bottom:3.25rem;
 }
 .absl p {
-	font-size:36px;
-	font-weight:700;
-	line-height:48px;
-	color:#FFF;
+	font-size:2.25rem;
+	line-height:3rem;
 }
 
 /*---- a ----*/
@@ -119,20 +124,16 @@ a {
 }
 #hero a {
 	font-size:1.5rem;
-	color:#FFF;
 }
 #hero a, #roasts a, #about a, #contact a {
-	font-weight:700;
 	padding:.35rem 2.75rem;
 	text-transform:uppercase;
 }
 #roasts a, #about a, #contact a {
 	font-size:1.25rem;
-	color:#000;
 	border:solid .2rem #000;
 }
 #newsletter a, #hero a {
-	color:#FFF;
 	border:solid .2rem #FFF;
 }
 #roasts a:hover, #about a:hover, #contact a:hover {
@@ -147,27 +148,17 @@ a {
 	color:#535049;
 	background-color:#FFF;
 }
-#footer a {
-	color:#FFF;
-	text-align:center;
-}
 #footer a:hover {
 	color:#89806F;
 }
 /*---- nav ----*/
 
-nav ul {
-	text-align:center;
-}
-nav li, footer li {
+li {
 	display:inline-block;
 	padding-right:3rem;
 }
 header nav li:nth-child(3) {
 	vertical-align:middle;
-}
-nav a {
-	color:#000;
 }
 nav a:hover {
 	color:#ACACAC;
@@ -189,12 +180,7 @@ blockquote p {
 	margin:0;
 	padding-bottom:10px;
 	font-size:1.75rem;
-	font-weight:700;
 	line-height:40px;
-	color:#FFF;
-}
-blockquote footer p {
-	font-weight:300;
 }
 
 /*======== FORM ========*/
@@ -208,8 +194,6 @@ input, textarea {
 #about input {
 	display:block;
 	margin:0 auto;
-	color:#FFF;
-	text-align:center;
 	padding:0 5.2rem .2rem;
 	margin-bottom:1rem;
 	border-bottom:solid .2rem #FFF;
@@ -262,40 +246,19 @@ input, textarea {
 	float: left;
 	padding-right: 1.25rem;
 }
-.rel {
-	position:relative;
-}
-.absl {
-	position:absolute;
-	z-index:100;
-	width:100%;
-}
-.block-center {
-	float:none !important;
-	margin:0 auto;
-	text-align:center;
-}
-figure {
-	margin:0;
-	padding-right:2rem;
-}
 #roasts .col-2-3 {
 	padding-left:1rem;
-}
-.p-tb-l {
-	padding:200px 0;
-}
-.p-tb-m {
-	padding:9.375rem 0;
-}
-.p-tb-s {
-	padding:5.625rem 0;
 }
 #contact .col-2-3, #contact .col-1-2:last-of-type {
 	padding:0 0 3rem;
 }
+
 /*======== MEDIA ========*/
 
+figure {
+	margin:0;
+	padding-right:2rem;
+}
 #roasts .absl {
 	width:45%;
 	left:22.5%;
@@ -316,6 +279,32 @@ nav img {
 }
 #footer img {
 	width:8rem;
+}
+#facebook, #twitter, #google-plus {
+	background-image:url("../img/twin-finch-sprites.png");
+	background-repeat:no-repeat;
+	margin:1rem 0 0 0;
+}
+#facebook {
+	padding:.125rem .875rem;
+	background-position:0 0;
+}
+#facebook:hover {
+	background-position:0 -1.625rem;
+}
+#twitter {
+	padding:.125rem 1rem;
+	background-position:0 -3.25rem;
+}
+#twitter:hover {
+	background-position:0 -4.875rem;
+}
+#google-plus {
+	padding:.125rem 1rem;
+	background-position:0 -6.5rem;
+}
+#google-plus:hover {
+	background-position:0 -8.125rem;
 }
 
 /*======== BACKGROUNDS ========*/
@@ -346,6 +335,32 @@ nav img {
 }
 #footer {
 	background-color:#535049;
+}
+
+/*======== UTILITY ========*/
+
+
+.block-center {
+	float:none !important;
+	margin:0 auto;
+	text-align:center;
+}
+.rel {
+	position:relative;
+}
+.absl {
+	position:absolute;
+	z-index:100;
+	width:100%;
+}
+.p-tb-l {
+	padding:200px 0;
+}
+.p-tb-m {
+	padding:9.375rem 0;
+}
+.p-tb-s {
+	padding:5.625rem 0;
 }
 
 /*======== SINGLE COLUMNS ========*/
@@ -449,6 +464,77 @@ nav img {
 
 @media screen and (max-width: 480px) {
 	
+	/*-------- TYPOGRAPHY --------*/
+	
+	/*---- h2 ----*/
+	
+	h2 {
+		font-size:3rem;
+	}
+	
+	/*---- h3 ----*/
+	
+	#hero h3 {
+		font-size:3rem;
+		border:solid .5rem #FFF;
+	}
+	
+	/*---- p ----*/
+	
+	p {
+		font-size:1rem;
+	}
+	#map-container p {
+		font-size:2.25rem;
+	}
+	
+	/*---- a ----*/
+	
+	#about a {
+		padding:.5rem 1rem;
+	}
+	
+	/*---- nav ----*/
+	
+	header nav {
+		font-size:.75rem;
+	}
+	header ul {
+		padding:0;
+	}
+	header nav li {
+		padding-right:1rem;
+	}
+	#footer ul {
+		padding:0;
+		margin-top:0;
+	}
+	#footer nav ul {
+		padding-left:3.25rem;
+	}
+	#footer li {
+		display:block;
+		padding:0 0 1rem;
+	}
+	nav li:last-of-type {
+		padding-right:0;
+	}
+	
+	/*---- blockquote ----*/
+	
+	blockquote {
+		font-size:1.6rem;
+	}
+	
+	/*-------- FORM --------*/
+	
+	#about input {
+		padding:0 3.5rem .2rem;
+		margin-bottom:1.25rem;
+	}
+	
+	/*-------- SITE STRUCTURE --------*/
+	
 	[class*="col-"] {
 		float: left;
 	}
@@ -456,11 +542,28 @@ nav img {
 		float:left;
 		padding-right:0;
 	}
-	.col-1-2 {
-		width:100%;
+	#contact .col-2-3, #contact .col-1-2 {
+		padding:0 0 1.65rem;
 	}
 	.col-1-3 {
 		padding:1rem 0;
+	}
+	
+	/*-------- MEDIA --------*/
+	
+	header img {
+		width:5rem;
+	}
+	#roasts .absl {
+		width:45%;
+		left:30.5%;
+		top:-2%;
+	}
+	
+	/*-------- COLUMNS --------*/
+	
+	.col-1-2 {
+		width:100%;
 	}
 	#roasts .col-2-3 {
 		width:66.66%;
@@ -470,34 +573,5 @@ nav img {
 	}
 	#about .col-1-3 {
 		width:100%;
-	}
-	nav ul {
-		padding:0;
-		margin-top:0;
-	}
-	#footer nav li {
-		display:block;
-		padding:0 0 1rem;
-	}
-	nav li:last-of-type {
-		padding-right:0;
-	}
-	#hero h3 {
-		font-size:3rem;
-		border:solid .5rem #FFF;
-	}
-	blockquote {
-		font-size:1.6rem;
-	}
-	p {
-		font-size:1rem;
-	}
-	#contact .col-2-3, #contact .col-1-2 {
-		padding:0 0 1.65rem;
-	}
-	#roasts .absl {
-		width:45%;
-		left:22.5%;
-		top:-5%;
 	}
 }
